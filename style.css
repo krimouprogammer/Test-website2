@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css? Family=Poppins:100,200,300,400,500,600,700,800,900');
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'popping',Sans-Serif;
+}
+:root{
+  --clr: #222327;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--clr)
+}
+.hero{
+  position: relative;
+  width: 400px;
+  height: 70px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.hero ul{
+  display: flex;
+  width: 350px;
+}
+.hero ul li
+{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.hero ul li a {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+.hero ul li a .icon{
+  display: block;
+  position: relative;
+  line-height: 75px;
+  font-size: 1.6em;
+  text-align: center;
+  transform: 0.6s;
+  color: var(--clr)
+}
+.hero ul li.active a .icon{
+  transform: translateY(-32px);
+}
+.hero ul li a .text{
+  position: absolute;
+  color: var(--clr);
+  font-weight: 400;
+  font-size: 0.74em;
+  letter-spacing: 0.05em;
+  transform: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.hero ul li.active a .text{
+  opacity: 1;
+  transform: translateY(10px)
+}
+.hh{
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: #29fd53;
+  border-radius: 50%;
+  border: solid 6px var(--clr);
+  transform: 0.5s;
+}
+.hh::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+border-top-right-radius: 20px;
+box-shadow: 0px -10px 0 0 var(--clr)
+}
+.hh::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+border-top-left-radius: 20px;
+box-shadow: 0px -10px 0 0 var(--clr)
+}
+
+
+
+.hero ul li:nth-child(1).active ~ .hh
+{
+transform: translateX(calc(70px * 0));
+} 
+.hero ul li:nth-child(2).active ~ .hh
+{
+transform: translateX(calc(70px * 1));
+} 
+.hero ul li:nth-child(3).active ~ .hh
+{
+transform: translateX(calc(70px * 2));
+} 
+.hero ul li:nth-child(4).active ~ .hh
+{
+transform: translateX(calc(70px * 3));
+} 
+.hero ul li:nth-child(5).active ~ .hh
+{
+transform: translateX(calc(70px * 4));
+} 
